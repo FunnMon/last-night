@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060d24">
+  <meta name="description" content="丧尸危机爆发后，你能活到第几天？12道沉浸式情境选择，解锁你的生存时长、幸存者类型与末日结局。">
+  <title>最后一夜｜丧尸生存测评</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="header container"><a class="brand" href="#" aria-label="最后一夜，回到首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12h20v16H6zM11 12 23 4M10 19h4m-4 4h4m6-5v6m3-6v6"/></svg><span>最后一夜<small>丧尸生存测评</small></span></a><span class="header-note">当所有日常，突然失效。</span></header>
+  <main id="main">
+    <section id="home-view" class="hero container" aria-labelledby="home-title">
+      <div class="hero-copy"><h1 id="home-title">丧尸危机爆发后，<br>你能活到第几天？</h1><p class="hero-lead">秩序崩塌只用了一夜。<br>你的选择，决定此后的每一天。</p><button class="button primary" type="button" data-action="start"><span id="start-label">进入爆发现场</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><div class="hero-facts"><span>12 道情境选择</span><span>4 段失序时刻</span><span>你的专属结局</span></div></div>
+      <figure class="city-frame"><img src="assets/city.webp" alt="夜色下被遗弃的城市路口，废弃车辆堵住街道，窗边放着一台收音机" width="1122" height="1402" fetchpriority="high"><figcaption><span>故事起点</span><span>第 0 天，18:42</span></figcaption></figure>
+    </section>
+    <section id="quiz-view" class="quiz container" hidden aria-labelledby="question-title"></section>
+    <section id="result-view" class="result container" hidden aria-labelledby="result-title"></section>
+    <noscript><p class="container noscript">请启用 JavaScript，以开始情境测评并生成结果。</p></noscript>
+  </main>
+  <footer class="footer container"><span>最后一夜之后，谁还在回应？</span><span>虚构世界的剧情推演，不代表现实生存能力。答案仅存于当前浏览器。</span></footer>
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+</body>
+</html>

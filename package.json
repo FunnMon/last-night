@@ -1,0 +1,14 @@
+{
+  "name": "last-night-survival-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "最后一夜：丧尸危机生存剧情测评。",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/survival.test.cjs",
+    "build": "node scripts/build-static.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
