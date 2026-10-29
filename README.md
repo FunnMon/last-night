@@ -39,14 +39,19 @@ npm test
 
 ## 代码与部署
 
-- 私有源码仓库：https://github.com/FunnMon/last-night
-- 公开站点地址：https://last-night-funnmon.yolonwood5.chatgpt.site
-- 网站访问权限为 Public，访客无须登录。GitHub 仓库保持 Private。
+- 公开源码仓库：https://github.com/FunnMon/last-night
+- GitHub Pages 正式网址：https://funnmon.github.io/last-night/
+- 网站公开访问，访客无须登录。
+- 先前的 Sites 网址仍保留：https://last-night-funnmon.yolonwood5.chatgpt.site
 
-网站为纯静态页面，使用 Sites 托管。当前 GitHub 套餐不支持从私有仓库发布 GitHub Pages。
+网站为纯静态页面，使用 GitHub Actions 部署至 GitHub Pages。
 
 ```sh
 npm run build
 ```
 
-`dist/` 只包含网页及其静态资源，README、测试和本地服务器不会作为公开资源部署。Sites 配置在 `.openai/hosting.json` 中；GitHub 提交用于保存源码，线上更新通过 Sites 发布流程完成。相对资源路径与 hash 路由也支持其他静态主机。
+`dist/` 只包含网页及其静态资源，README、测试和本地服务器不会作为网站资源部署。
+
+每次向 `main` 分支推送，`.github/workflows/pages.yml` 会运行测评规则测试、生成 `dist/`，并自动发布到 GitHub Pages。也可以在仓库 Actions 中手动运行 `Deploy GitHub Pages`。
+
+`.openai/hosting.json` 为先前 Sites 托管配置，不参与 GitHub Pages 部署。相对资源路径与 hash 路由支持 `/last-night/` 仓库子路径。
